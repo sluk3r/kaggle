@@ -1,5 +1,8 @@
 Kaggle记录
 
+https://www.dataquest.io/mission/74/getting-started-with-kaggle
+-------------------------------------------------------------
+
 还是要参加Kaggle竞赛了。 
 
 
