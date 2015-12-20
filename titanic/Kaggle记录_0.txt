@@ -1,0 +1,86 @@
+Kaggle记录
+
+还是要参加Kaggle竞赛了。 
+
+
+不清楚第一次知道Kaggle是什么时候的事了， 再次看到并起心动念是从http://www.datasciencecentral.com/profiles/blogs/20-free-big-data-sources-everyone-should-check-out这个链接开始。
+
+----------------------
+
+Kaggle是什么， 除了知道他是一个跟大数据相关的竞赛外， 别的一无所知。 
+
+
+从哪开始？也不清楚。 
+看到两个链接： Want to learn from other's code?（https://www.kaggle.com/scripts）和Tutorials on the Titanic competition（https://www.kaggle.com/c/titanic）
+
+
+从第二个链接开始， 效果会好些。
+----------------
+1. 貌似这是一个结合Titanic事故，介绍数据挖掘技术的入门贴。 
+
+2. Titanic: Machine Learning from Disaster。 标题是这个， 这个标题中From怎么理解？ 从灾难中提炼出来的机器学习？ 
+3. “Predict survival on the Titanic using Excel, Python, R & Random Forests”， 标题是说用Excel等工具来预测Titanic灾难中的幸存者？ 个数？怎么预测？
+4. “Submit directly to the competition, no data download or local environment needed!”不用下载数据或者环境搭建， 是可以直接在Kaggle环境里玩起来？
+5. 看到目标了： 建模预估下， 最后能幸免于难的人都有什么特征？ 
+6. 网站视频是Youtube上的， 看不了， 可恨。
+-----------------------------------
+0. 视频可以看了， 这个视频里只是Titanic空难的介绍， 并没有涉及到数据机器学习。
+1, "see links in the sidebar", 刚开始时， 以为是一个很纯粹的内容介绍页面， 看了“see links in the sidebar”后， 更多内容在左侧的链接中。 
+2. “New to machine learning?， We recommend getting started with this either of these free, interactive Titanic tutorials:”， 这种体验式学习是最好的入口。 这也是玩象棋的乐趣。
+-------------------------------------------
+1. 跳到这个链接https://www.dataquest.io/course/kaggle-competitions后， 内容貌似跟Titanic不相关了。 再往下看看。
+2. 下载下来csv的文件了， 有一句话， 大意是“高度结构化会容易些”，为啥？没有体会？是不是非结构化数据最终是要转成结构数据的， 这些数据已经是结构化报， 省得转换的步骤。
+3. “A good first step is to think logically about the columns and what we're trying to predict”， 这句话不错， 这也是理性做事的第一步。 学术上叫“acquiring domain knowledge”， 不错， 体会式地掌握了这一个术语。
+4. 用到这些工具：python 3, the pandas library, and scikit-learn, windows下不方便， 再把虚拟机搞起？
+5. 就这个例子， 目前还不用装Python环境， 直接在页面里修改Code， 就能看到代码效果。
+6，体会到pandas包的威力： 可以把csv文件加载成内存， 再按列地输出这些内容： count, mean, std, min, 25%, 50%, 75%, max。 强。 这里的std具体指？别的列很容易理解。 
+7. dataquest页面不错， 不但可以所见所得地运行代码， 也可代码内存信息。 是不是可以用这个https://www.datacamp.com/courses/kaggle-tutorial-on-machine-learing-the-sinking-of-the-titanic， 顺便学下R语言。 应该可以。
+8. “train a better algorithm”， 貌似这个例子的最后结果， 能看到训练出来的算法。 期待。
+9. 清洗数据时的考虑， 看到Age列清洗的两难。例子中是用中间数来替代MissingData。
+10. titanic["Age"] = titanic["Age"].fillna(titanic["Age"].median()) 擦！！这么强， 完全是像SQL那样地整列操作， 完全屏蔽了遍历。 强！！！
+-----------------------------------------------
+0. “We'll ignore the Ticket, Cabin, and Name columns. There isn't much information we can extract from there.”如果加上， 会有什么结果。 实际经验中， 是不是有这样的情况， 对于一些拿不定是否要去掉的列， 怎么做最终的决定？ 
+1. 这个网站用着用着， 慢慢地体会到， 业务远大于技术， 互联网时代， 如果没有互联网，根本不可能有这样产品出来。 
+2. 使用上的一个小经验， 并不是把原来的替换掉， 而是新加。 
+3. “Overfitting is what happens when a model fits itself to "noise", not signal.”， 这句话怎么理解？ 
+4. 第7节“On to machine learning!”，是个视频， 又看不到了。 
+5. Cross validation， 不懂， overfitting， 不懂。
+-------7------------
+We want to train the algorithm on different data than we make predictions on. This is critical if we want to avoid overfitting. Overfitting is what happens when a model fits itself to "noise", not signal. Every dataset has its own quirks that don't exist in the full population. For example, if I asked you to predict the top speed of a car from its horsepower and other characteristics, and gave you a dataset that randomly had cars with very high top speeds, you would create a model that overstated speed. The way to figure out if your model is doing this is to evaluate its performance on data it hasn't been trained using.
+
+
+我们不是在最终做预测的数据，而是别的数据上训练算法。 这对于避免Overfitting来说是至关重要的。 Overfitting当一个模型合适了“噪音”而不是有效信号所发生的情景。 每一批数据都有它特有的缺陷。例如，如果要求你从汽车的马力和其它特性上来预测汽车的最高时速，这时给你一批数据（这些数据随机地有一些汽车有很高的速度）， 你将会生成一个夸大速度的模型。判断是否在做错误的方式是在非训练的方法上来评估效果。
+
+
+
+
+
+
+理解不通， 就硬着头皮翻译一下， 虽然没有理解通顺的翻译也是一团乱麻。以翻译来促理解。
+-------8-----------------------
+
+------9--------
+
+-------10---------
+交叉校验不错， 可以把数据分成三份。 
+第一次用P1和P2来训练模型，对P3预测。
+第二次用P1和P3训练模型，对P2预测。
+第三次用P2和P3训练模型，对P1预测。
+
+
+这样， 针对整体数据生成了预测， 而不是用同一批数据既训练又预测。
+
+
+
+
+
+这样有一个问题， 三次预测的结果， 最终怎么合并？
+还是说， 把三次训练的模型合并后，再对整体数据预测下？
+
+-------------11---------
+0. “an error metric”， 这个定义？怎么生成？ 有了这个后， 就可以评估模型是否成功。
+1. 从kaggle竞赛的角度看， 这个error metric就是正确预测的百分比。  这个又怎么理解?
+2. "The metric will basically involve finding the number of values in predictions that are the exact same as their counterparts in titanic["Survived"], and then dividing by the total number of passengers."    应该是看预测结果中， 跟实际完全匹配的个数。 
+3. "numpy array"， 机器学习中常用的数据结构已经跟常用的不同。 
+4. 视频中， 提到一种方法可以把线形回归的结果转成0到1间的数值，  logistic regression
+5. “Logistic regression”的结果是0.787878787879， 跟上面的0.7833894500561167， 貌似没什么区别。 何解？
